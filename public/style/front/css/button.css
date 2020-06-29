@@ -1,0 +1,209 @@
+.glow-on-hover {
+    width: 200px;
+    height: 43px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #343a40;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.glow-on-hover:before {
+    content: "";
+    background: linear-gradient(
+        45deg,
+        #ff0000,
+        #ff7300,
+        #fffb00,
+        #48ff00,
+        #00ffd5,
+        #002bff,
+        #7a00ff,
+        #ff00c8,
+        #ff0000
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000;
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #343a40;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 400% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+
+
+
+  .ct {
+    width: auto;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+  }
+
+  .bt {
+    margin: 20px auto;
+    border: none;
+    padding: 10px 44px;
+    font-size: 20px;
+    position: relative;
+  }
+  .bt::before {
+    -webkit-transition: all 0.85s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: all 0.85s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    content: '';
+    width: 50%;
+    height: 100%;
+    background: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .bt .bt-text {
+    color: white;
+    mix-blend-mode: difference;
+  }
+  .bt:hover::before {
+    background: black;
+    width: 100%;
+  }
+  .bt.rounded {
+    border-radius: 50px;
+  }
+  .bt.rounded .text-green {
+    color: #00F0B5;
+    mix-blend-mode: difference;
+  }
+  .bt.rounded::before {
+    border-radius: 50px;
+    width: 25%;
+    background: #00F0B5;
+  }
+  .bt.rounded:hover::before {
+    background: #00F0B5;
+    width: 100%;
+  }
+ /* ??? */
+
+
+  .bt1 {
+    overflow: visible;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 10px;
+    background: transparent;
+    font: inherit;
+    line-height: normal;
+    cursor: pointer;
+    -moz-user-select: text;
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #666;
+    border: 2px solid #666;
+    border-radius: 6px;
+    margin-bottom: 16px;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+    display: block;
+
+  }
+  .bt1:-moz-focus-inner {
+    padding: 0;
+    border: 0;
+  }
+  .bt1--stripe {
+    overflow: hidden;
+    position: relative;
+  }
+  .bt1--stripe:after {
+    content: '';
+    display: block;
+    height: 7px;
+    width: 100%;
+    background-image: repeating-linear-gradient(45deg, #666, #666 1px, transparent 2px, transparent 5px);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-top: 1px solid #666;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-size: 7px 7px;
+  }
+  .bt1--stripe:hover {
+    background-color: #666;
+    color: #fff;
+    border-color: #000;
+  }
+  .bt1--stripe:hover:after {
+    background-image: repeating-linear-gradient(45deg, #fff, #fff 1px, transparent 2px, transparent 5px);
+    border-top: 1px solid #000;
+    -webkit-animation: stripe-slide 12s infinite linear forwards;
+            animation: stripe-slide 12s infinite linear forwards;
+  }
+  .bt1--m {
+    width: 100%;
+  }
+  .bt1--l {
+    width: 100%;
+  }
+  .bt1--radius {
+    border-radius: 36px;
+  }
+
+
+  .bg1{
+    background-image: url('/style/front/img/10.png');
+    background-position: left;
+    height: 100%;
+
+  }

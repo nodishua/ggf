@@ -45,7 +45,6 @@ class OrderController extends Controller
 	    	$order->tanggal = $tanggal;
 	    	$order->status = 0;
             $order->jumlah_harga = 0;
-            $order->note="";
             $order->kode = mt_rand(100, 999);
 	    	$order->save();
     	}

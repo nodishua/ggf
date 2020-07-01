@@ -66,6 +66,10 @@ class OrderController extends Controller
                 alert()->error('Jangan Ngadi-Ngadi Lu Bray', 'Error');
                 return back();
             }
+            if($request->jumlah_order > $product->stock){
+                alert()->error('Jangan Ngadi-Ngadi Lu Bray', 'Error');
+                return back();
+            }
             $order_detail->save();
     	}else
     	{

@@ -61,8 +61,12 @@ class OrderController extends Controller
 	    	$order_detail->order_id = $order_baru->order_id;
             $order_detail->jumlah = $request->jumlah_order;
             $order_detail->note = $request->note;
-	    	$order_detail->jumlah_harga = $product->harga*$request->jumlah_order;
-	    	$order_detail->save();
+            $order_detail->jumlah_harga = $product->harga*$request->jumlah_order;
+            if($request->jumlah_order <= 0){
+                alert()->error('Jangan Ngadi-Ngadi Lu Bray', 'Error');
+                return back();
+            }
+            $order_detail->save();
     	}else
     	{
     		$order_detail = OrderDetail::where('product_id', $product->product_id)->where('Order_id', $order_baru->order_id)->first();

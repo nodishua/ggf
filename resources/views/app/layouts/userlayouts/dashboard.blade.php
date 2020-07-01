@@ -7,10 +7,10 @@
           <h3><strong> HOT PRODUCTS </strong></h3>
         </div>
     </div>
-    <div class="row row-fluid justify-content-center text ">
+    <div class="row justify-content-center text ">
         @foreach($product as $products)
         <div class="col-md-4">
-            <div class="card-columns-fluid bb">
+            <div class="card bb" style="width: 18rem;">
               <img src="{{ url('images/products') }}/{{ $products->image}}" class="card-img-top">
               <div class="card-body">
                 <h5 class="card-title">{{ $products->name_product }}</h5>

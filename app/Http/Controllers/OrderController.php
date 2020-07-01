@@ -134,6 +134,10 @@ class OrderController extends Controller
         $order = Order::where('user_id', Auth::user()->user_id)->where('status',0)->first();
         $order_id = $order->order_id;
         $order->status = 1;
+        if($order->jumlah_harga = $order->kode ){
+            alert()->error('Product Yang Dibeli Tidak Boleh Kosong', 'Error');
+            return redirect('/product');
+        }
         $order->update();
 
         $order_details = OrderDetail::where('order_id', $order_id)->get();

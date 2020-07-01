@@ -32,8 +32,13 @@ class OrderController extends Controller
     	//validasi apakah melebihi stok
     	if($request->jumlah_Order > $product->quantity)
     	{
-    		return redirect('user/order/'.$id);
-    	}
+    		alert()->error('Jangan Ngadi-Ngadi Lu Bray', 'Error');
+            return back();
+        }
+        elseif($request->jumlah_order <= 0){
+            alert()->error('Jangan Ngadi-Ngadi Lu Bray', 'Error');
+            return back();
+        }
 
     	//cek validasi
     	$cek_order = Order::where('user_id', Auth::user()->user_id)->where('status',0)->first();
@@ -62,25 +67,8 @@ class OrderController extends Controller
             $order_detail->jumlah = $request->jumlah_order;
             $order_detail->note = $request->note;
             $order_detail->jumlah_harga = $product->harga*$request->jumlah_order;
-            if($request->jumlah_order <= 0){
-                alert()->error('Jangan Ngadi-Ngadi Lu Bray', 'Error');
-                return back();
-            }
-            elseif($request->jumlah_order > $product->stock){
-                alert()->error('Jangan Ngadi-Ngadi Lu Bray', 'Error');
-                return back();
-            }
-            else{
-            $order_detail = new OrderDetail;
-	    	$order_detail->product_id = $product->product_id;
-	    	$order_detail->order_id = $order_baru->order_id;
-            $order_detail->jumlah = $request->jumlah_order;
-            $order_detail->note = $request->note;
-            $order_detail->jumlah_harga = $product->harga*$request->jumlah_order;
-            }
             $order_detail->save();
-    	}else
-    	{
+    	}else{
     		$order_detail = OrderDetail::where('product_id', $product->product_id)->where('Order_id', $order_baru->order_id)->first();
     		$order_detail->jumlah = $order_detail->jumlah+$request->jumlah_order;
 

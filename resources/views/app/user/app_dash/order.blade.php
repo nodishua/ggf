@@ -12,7 +12,6 @@
             <img src="{{ url('images/products') }}/{{ $product->image}}" alt="" width="500px" class=" img-fluid h-100 d-block">
         </div>
         <div class="card-body">
-            <div class="card-block px-3 mt-3">
                 <h3 class="card-title"><strong>{{ $product->name_product }}</strong></h3>
                     <p class="card-text">
                         <strong>Price :</strong> Rp. {{ number_format($product->harga)}} <br>
@@ -30,7 +29,6 @@
                     <textarea class="form-control" id="note" name="note"rows="5"></textarea>
                     <button type="submit" class="btn btn-dark mt-3 mb-3"><i class="fa fa-shopping-cart"></i> Add To Cart</a>
                 </form>
-            </div>
         </div>
     </div>
 </div>

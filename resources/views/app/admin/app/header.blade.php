@@ -122,7 +122,10 @@
                     </ul>
                   </li>
                   <li class="nav-item">
-                    <a href="{{ route('admin.logout') }}" class="nav-link">
+                    <a class="nav-link" href="{{ route('admin.logout') }}" >
+                        onclick="event.preventDefault();
+                                         document.getElementById('logout-form').submit();">
+                            {{ __('Logout') }}
                       <i class="nav-icon fa fa-sign-out"></i>
                       <p>
                         Logout

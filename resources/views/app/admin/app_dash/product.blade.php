@@ -11,6 +11,7 @@
                     <div class="card-header">
                         <button type="button" class="btn btn-dark float-right" data-toggle="modal" data-target="#tambahProduct">Tambah Product</button>
                     </div>
+                    <div class="card-body">
                         <div class="table-responsive text-nowrap">
                         <table id="myTable" class="table table-striped">
                             <thead>
@@ -46,9 +47,7 @@
                             @endforeach
                             </tbody>
                         </table>
-                        {{--  <div class="ml-3">
-                            {{ $data_product->links() }}
-                        </div>  --}}
+                        </div>
                         </div>
                     </div>
                 </div>

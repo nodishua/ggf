@@ -82,7 +82,7 @@
                                 </tr>
                                 <tr>
                                     <td colspan="6" align="right"><strong>Harga Ongkir :</strong></td>
-                                    <td align="right"><strong>Promo Free Ongkir</strong></td>
+                                    <td align="right"><strong>Free Ongkir</strong></td>
                                 </tr>
                                 <tr>
                                     <td colspan="6" align="right"><strong>Total yang harus ditransfer :</strong></td>

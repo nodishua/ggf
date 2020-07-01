@@ -11,6 +11,7 @@
                     <div class="card-header">
                         <button type="button" class="btn btn-dark float-right" data-toggle="modal" data-target="#tambahEvent">Tambah Event</button>
                     </div>
+                    <div class="card-body">
                     <div class="table-responsive text-nowrap">
                         <table id="myTable" class="table table-striped">
                         <thead>
@@ -38,6 +39,7 @@
                         @endforeach
                         </tbody>
                         </table>
+                        </div>
                         </div>
                     </div>
                 </div>

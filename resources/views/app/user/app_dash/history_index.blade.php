@@ -46,7 +46,7 @@
                                 <td>Rp. {{ number_format($order->jumlah_harga+$order->kode) }}</td>
                                 <td>
                                     <a href="{{ url('user/history') }}/{{ $order->order_id }}" class="btn btn-primary"><i class="fa fa-info"></i> Detail</a>
-                                    <a href="{{ url('user/history/cetak_history') }}/{{ $order->order_id }}" class="btn btn-primary"><i class="fa fa-print"></i> print</a>
+                                    {{--  <a href="{{ url('user/history/cetak_history') }}/{{ $order->order_id }}" class="btn btn-primary"><i class="fa fa-print"></i> print</a>  --}}
                                 </td>
                             </tr>
                             @endforeach

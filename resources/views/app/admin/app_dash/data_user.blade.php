@@ -8,6 +8,7 @@
                 <div class="row">
                 <div class="col-md-6">
                     <div class="card card-dark">
+                        <div class="card-body">
                         <div class="table-responsive text-nowrap">
                         <table id="myTable" class="table table-striped">
                             <thead>
@@ -35,6 +36,7 @@
                             @endforeach
                             </tbody>
                         </table>
+                        </div>
                         </div>
                     </div>
                 </div>

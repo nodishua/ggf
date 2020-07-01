@@ -9,6 +9,8 @@
                 <div class="col-md-12">
                     <div class="card card-dark">
                         <div class="card-header">
+                        </div>
+                        <div class="card-body">
                         <div class="table-responsive text-nowrap">
                             <table id="myTable" class="table table-striped">
                             <thead>
@@ -53,9 +55,7 @@
                             @endforeach
                             </tbody>
                             </table>
-                            <div class="ml-3">
-                                {{ $data_order->links() }}
-                            </div>
+                        </div>
                         </div>
                     </div>
                 </div>

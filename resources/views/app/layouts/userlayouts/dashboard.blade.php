@@ -28,10 +28,8 @@
                     <strong>Description :</strong> <br>
                     {{ $products->description }}
                 </p>
-                <div class="d-flex">
                     <a href="{{ route('order.index',$products) }}" class="bt1 bt1--stripe bt1--m text-nowrap"><i class="fa fa-shopping-cart"></i> Order</a>
                     <a href="{{ route('product_show', $products) }}" class="bt1 bt1--stripe bt1--m"><i class="fa fa-eye"></i> View</a>
-                </div>
               </div>
             </div>
         </div>

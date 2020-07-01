@@ -10,7 +10,7 @@
     <div class="row row-fluid justify-content-center text ">
         @foreach($product as $products)
         <div class="col-md-4">
-            <div class="card bb">
+            <div class="card-columns-fluid bb">
               <img src="{{ url('images/products') }}/{{ $products->image}}" class="card-img-top">
               <div class="card-body">
                 <h5 class="card-title">{{ $products->name_product }}</h5>

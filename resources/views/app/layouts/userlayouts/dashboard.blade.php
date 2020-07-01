@@ -11,7 +11,7 @@
         @foreach($product as $products)
         <div class="col-md-4 d-flex align-items-stretch">
             <div class="card bb">
-              <img src="{{ url('images/products') }}/{{ $products->image}}" class="card-img-top">
+              <img src="{{ url('images/products') }}/{{ $products->image}}" class="card-img-top"><hr>
               <div class="card-body">
                 <h5 class="card-title">{{ $products->name_product }}</h5>
                 <p class="card-text">

@@ -30,7 +30,7 @@ class OrderController extends Controller
     	$tanggal = Carbon::now();
 
     	//validasi apakah melebihi stok
-    	if($request->jumlah_Order > $product->quantity)
+    	if($request->jumlah_order > $product->quantity)
     	{
     		alert()->error('Jangan Ngadi-Ngadi Lu Bray', 'Error');
             return back();

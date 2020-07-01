@@ -20,6 +20,7 @@
                     <strong>Stok :</strong> {{ $products->quantity }} <br>
                     <hr>
                     <strong>Details :</strong> {{ $products->details }}<br>
+                    <strong>List Warna : </strong><br>
                     <a href="http://garagegraff.patunganbersama.com/DitonKing300ML">300ML</a><br>
                     <a href="http://garagegraff.patunganbersama.com/DitonKing400ML">400ML</a>
                     <br>

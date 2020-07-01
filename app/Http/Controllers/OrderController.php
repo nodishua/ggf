@@ -136,7 +136,7 @@ class OrderController extends Controller
         $order->status = 1;
         if($order->jumlah_harga == 0 ){
             alert()->error('Product Yang Dibeli Tidak Boleh Kosong', 'Error');
-            return redirect('/product');
+            return redirect('/user/check_out');
         }
         $order->update();
 

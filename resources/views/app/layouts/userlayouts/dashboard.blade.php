@@ -9,8 +9,8 @@
     </div>
     <div class="row justify-content-center text ">
         @foreach($product as $products)
-        <div class="col-md-4">
-            <div class="card bb" style="width: 18rem;">
+        <div class="col-md-4 d-flex align-items-stretch">
+            <div class="card bb">
               <img src="{{ url('images/products') }}/{{ $products->image}}" class="card-img-top">
               <div class="card-body">
                 <h5 class="card-title">{{ $products->name_product }}</h5>

@@ -8,7 +8,7 @@
             </ol>
         </nav>
     <div class="card">
-        <div class="card-header border-0">
+        <div class="card-header">
             <img src="{{ url('images/products') }}/{{ $product->image}}" alt="" width="500px" class=" img-fluid h-100 d-block">
         </div>
         <div class="card-body">

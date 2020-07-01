@@ -27,7 +27,7 @@
                                 <?php $no = 1; ?>
                                 @foreach($data_order as $order)
                                 <tr>
-                                <form  action="{{ url('admin/status_order/'.$order->order_id) }}" method="POST">
+                                <form  action="{{ route('admin.status_update', $order->order_id) }}" method="POST">
                                 @csrf
                                 <td>{{ $no++ }}</td>
                                 <td>{{ $order->order_id }}</td>

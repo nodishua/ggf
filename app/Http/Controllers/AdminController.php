@@ -258,6 +258,13 @@ class AdminController extends Controller
         return view('app.admin.app_dash.status_order',compact('data_order'));
     }
 
+    public function order_delete($id){
+        $data_order = \App\Order::find($id);
+        $data_order->delete($data_order);
+        alert()->error('Delete Order Success', 'Success');
+        return back();
+    }
+
     public function status_update(Request $request,$id){
         $data = array("status"=>$request->status);
         $data_order = Order::find($id);

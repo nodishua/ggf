@@ -85,6 +85,7 @@ Route::prefix('admin')->group(function () {
         // Status
         Route::get('/status_order','AdminController@status_order')->name('admin.status_order');
         Route::post('/status_order/{id}','AdminController@status_update')->name('admin.status_update');
+        Route::get('/status_order/{id}/delete','AdminController@order_delete')->name('admin.order_delete');
 
         // password reset
         Route::post('/password/email', 'Auth\AdminForgotPasswordController@sendResetLinkEmail')->name('admin.password.email');

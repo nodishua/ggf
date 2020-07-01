@@ -40,7 +40,7 @@
                                 <td class="text-right py-0 align-middle">
                                 <div class="btn-group btn-group-sm">
                                     <a href="{{ route('admin.product_show', $product) }}" class="btn btn-info"><i class="fas fa-eye"></i></a>
-                                    <a href="{{ url('admin/product/'.$product->product_id.'/delete') }}" class="btn btn-danger"><i class="fas fa-trash"></i></a>
+                                    <a href="{{ route('admin.delete_product', $product->product_id) }}" class="btn btn-danger"><i class="fas fa-trash"></i></a>
                                 </div>
                                 </td>
                             </tr>

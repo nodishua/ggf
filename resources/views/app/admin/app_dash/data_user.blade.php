@@ -29,7 +29,7 @@
                                 <td class="text-right py-0 align-middle">
                                 <div class="btn-group btn-group-sm">
                                     <a href="{{ route('admin.user_profile', $user) }}" class="btn btn-info"><i class="fas fa-eye"></i></a>
-                                    <a href="{{ $user->user_id }}/delete" class="btn btn-danger"><i class="fas fa-trash"></i></a>
+                                    <a href="{{ route('admin.delete_user', $user) }}" class="btn btn-danger"><i class="fas fa-trash"></i></a>
                                 </div>
                                 </td>
                             </tr>

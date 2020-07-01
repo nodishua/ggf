@@ -2,12 +2,13 @@
 <div class="content-wrapper">
     <section class="content">
         <div class="content-header">
-            <h1><strong>Data Product</strong></h1>
+            <h1><strong>Event Detail</strong></h1>
         </div>
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-10">
                     <div class="card card-dark">
+                    <div class="card-body">
                     {{ csrf_field() }}
                     {!! Form::model($event, ['route'=>['admin.event_update',$event->event_id], 'method'=>'PUT', 'files'=>true]) !!}
 
@@ -26,6 +27,7 @@
                         </div>
                         <button type="submit" class="btn btn-primary">Submit</button>
                     {!! Form::close() !!}
+                    </div>
                     </div>
                 </div>
             </div>

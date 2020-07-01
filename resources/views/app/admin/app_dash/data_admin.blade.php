@@ -31,7 +31,7 @@
                             <td>{{ $admin->email }}</td>
                             <td class="py-0 align-middle">
                             <div class="btn-group btn-group-sm">
-                                <a href="{{ $admin->admin_id }}/delete" class="btn btn-danger"><i class="fas fa-trash"></i></a>
+                                <a href="{{ route('admin.delete_admin', $admin) }}" class="btn btn-danger"><i class="fas fa-trash"></i></a>
                             </div>
                             </td>
                         </tr>

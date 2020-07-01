@@ -32,7 +32,7 @@
                             <td class="text-right py-0 align-middle">
                             <div class="btn-group btn-group-sm">
                                 <a href="{{ route('admin.event_show', $event) }}" class="btn btn-info"><i class="fas fa-eye"></i></a>
-                                <a href="{{ $event->event_id }}/delete" class="btn btn-danger"><i class="fas fa-trash"></i></a>
+                                <a href="{{ route('admin.event_delete', $event) }}" class="btn btn-danger"><i class="fas fa-trash"></i></a>
                             </div>
                             </td>
                         </tr>

@@ -8,6 +8,7 @@
             <div class="row">
                 <div class="col-md-10">
                     <div class="card card-dark">
+                        <div class="card-body">
                         {{ csrf_field() }}
                         {!! Form::model($product, ['route'=>['admin.product_update',$product->product_id], 'method'=>'PUT', 'files'=>true]) !!}
 
@@ -38,7 +39,8 @@
                             </div>
                             <button type="submit" class="btn btn-dark ml-3">Save</button>
                     {!! Form::close() !!}
-                        </div>
+                    </div>
+                    </div>
                 </div>
             </div>
         </div>

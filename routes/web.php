@@ -57,10 +57,10 @@ Route::prefix('admin')->group(function () {
         // Update Panel
         Route::get('/data_admin', 'AdminController@data_admin')->name('admin.data_admin');
         Route::post('/data_admin', 'AdminController@tambah_data_admin')->name('admin.tambah_data_admin');
-        Route::get('/{id}/delete','AdminController@delete_admin')->name('admin.delete_admin');
+        Route::get('/data_admin/{id}/delete','AdminController@delete_admin')->name('admin.delete_admin');
         // Data User
         Route::get('/data_user', 'AdminController@data_user')->name('admin.data_user');
-        Route::get('/{id}/delete','AdminController@delete_user')->name('admin.delete_user');
+        Route::get('/data_user/{id}/delete','AdminController@delete_user')->name('admin.delete_user');
         Route::get('/user_profile/{id}','AdminController@user_profile')->name('admin.user_profile');
 
         // Data Produk
@@ -75,7 +75,7 @@ Route::prefix('admin')->group(function () {
         Route::post('/event', 'AdminController@tambah_data_event')->name('admin.tambah_data_event');
         Route::get('/detail_event/{event_id}', 'AdminController@event_show')->name('admin.event_show');
         Route::match(['put','patch'],'/detail_event/{event_id}', 'AdminController@event_update')->name('admin.event_update');
-        Route::get('/{id}/delete','AdminController@delete_event')->name('admin.delete_event');
+        Route::get('/event/{id}/delete','AdminController@delete_event')->name('admin.delete_event');
 
         // Data Order
         Route::get('/data_order','AdminController@data_order')->name('admin.order_data');

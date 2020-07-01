@@ -45,7 +45,7 @@
                                 </select>
                                 </td>
                                 <td>
-                                    <button type="submit" id="cf-submit" name="submit" class="btn btn-primary"><i class="fa fa-refresh"></i> Update</>
+                                    <button type="submit" id="cf-submit" name="submit" class="btn btn-primary">Update <i class="fa fa-refresh"></i></button>
                                 </td>
                                 <td>
                                     <a href="{{ url('admin/status_order/'.$order->order_id.'/delete') }}" class="btn btn-danger"><i class="fas fa-trash"></i></a>

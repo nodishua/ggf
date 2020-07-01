@@ -20,10 +20,12 @@
                             <strong>Description :</strong> <br>
                             {{ $product->description }}
                         </p>
+                        <a href="{{ route('order.index',$product) }}" class="btn btn-dark"><i class="fa fa-shopping-cart"></i> Order</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
 @include('app.user.app.footer')

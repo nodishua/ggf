@@ -9,6 +9,29 @@
     </div>
     <div class="row justify-content-center text ">
         @foreach($product as $products)
+        @if($products->name_product == "Diton King Spray")
+        <div class="col-md-4">
+            <div class="card bb">
+              <img src="{{ url('images/products') }}/{{ $products->image}}" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">{{ $products->name_product }}</h5>
+                <p class="card-text">
+                    <strong>Harga :</strong> Rp. {{ number_format($products->harga)}} <br>
+                    <strong>Stok :</strong> {{ $products->quantity }} <br>
+                    <hr>
+                    <strong>Details :</strong> {{ $products->details }}<br>
+                    <a href="http://garagegraff.patunganbersama.com/DitonKing300ML">300ML</a><br>
+                    <a href="http://garagegraff.patunganbersama.com/DitonKing400ML">400ML</a>
+                    <br>
+                    <strong>Description :</strong> <br>
+                    {{ $products->description }}
+                </p>
+                <a href="{{ route('order.index',$products) }}" class="bt1 bt1--stripe bt1--m text-nowrap"><i class="fa fa-shopping-cart"></i> Order</a>
+                <a href="{{ route('product_show', $products) }}" class="bt1 bt1--stripe bt1--m"><i class="fa fa-eye"></i> View</a>
+              </div>
+            </div>
+        </div>
+        @else
         <div class="col-md-4">
             <div class="card bb">
               <img src="{{ url('images/products') }}/{{ $products->image}}" class="card-img-top" alt="...">
@@ -27,6 +50,7 @@
               </div>
             </div>
         </div>
+        @endif
         @endforeach
     </div>
 </div>

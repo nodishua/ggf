@@ -53,13 +53,15 @@ class AdminController extends Controller
         $data_admin->email =$request->email;
         $data_admin->password = bcrypt($request->password);
         $data_admin->save();
+        alert()->success('Add Admin Success', 'Success');
         return redirect('/admin/data_admin')->with('sukses','Data Berhasil Ditambahkan');
 
     }
     public function delete_admin(Request $request,$id){
         $data_admin = \App\Admin::find($id);
         $data_admin->delete($data_admin);
-        return redirect('/admin/data_admin')->with('destroy','Data Berhasil Dihapus');
+        alert()->error('Delete Admin Success', 'Success');
+        return redirect('/admin/data_admin');
     }
     //Proses User
     public function data_user(){
@@ -75,7 +77,8 @@ class AdminController extends Controller
     public function delete_user(Request $request,$id){
         $data_user = \App\User::find($id);
         $data_user->delete($data_user);
-        return redirect('/admin/data_user')->with('destroy','Data Berhasil Dihapus');
+        alert()->error('Delete User Success', 'Success');
+        return redirect('/admin/data_user');
     }
 
     // Proses Produk

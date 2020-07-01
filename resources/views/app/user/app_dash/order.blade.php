@@ -7,7 +7,7 @@
                     <div class="col-12 col-sm-6">
                     <h3 class="d-inline-block d-sm-none">Product</h3>
                     <div class="col-12">
-                        <img src="{{ url('images/products') }}/{{ $product->image}}" alt="" class="product-image" style="width:489px; height:600px;">
+                        <img src="{{ url('images/products') }}/{{ $product->image}}" alt="" class="product-image" style="width:489px; height:489px;">
                     </div>
                 </div>
                     <div class="col-12 col-sm-6">

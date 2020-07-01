@@ -7,11 +7,15 @@
                 <li class="breadcrumb-item active" aria-current="page">Product</li>
             </ol>
         </nav>
-    <div class="card">
-        <div class="card-header">
+        <div class="card card-solid bb">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-12 col-sm-6">
+                  <h3 class="d-inline-block d-sm-none">{{ $product->name_product }}</h3>
+            <div class="col-12">
             <img src="{{ url('images/products') }}/{{ $product->image}}" alt="" class="card-img-top" style="width:327px; height:200px">>
-        </div>
-        <div class="card-body">
+            </div>
+            <div class="col-12 col-sm-6">
                 <h3 class="card-title"><strong>{{ $product->name_product }}</strong></h3>
                     <p class="card-text">
                         <strong>Price :</strong> Rp. {{ number_format($product->harga)}} <br>
@@ -29,8 +33,8 @@
                     <textarea class="form-control" id="note" name="note"rows="5"></textarea>
                     <button type="submit" class="btn btn-dark mt-3 mb-3"><i class="fa fa-shopping-cart"></i> Add To Cart</a>
                 </form>
+            </div>
         </div>
     </div>
-</div>
 </div>
 @include('app.user.app.footer')

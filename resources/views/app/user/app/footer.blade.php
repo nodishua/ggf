@@ -1,9 +1,9 @@
 <footer class="page-footer navbar-dark">
 <div class="text-center">
-    <a href="https://www.instagram.com/garagegraffstore/" class="btn btn-dark"><i class="fa fa-fw fa-instagram"></i> Follow Us</a>
+    <button onClick="window.open('https://www.instagram.com/garagegraffstore/')" class="btn btn-dark"><i class="fa fa-fw fa-instagram"></i> Follow Us</button><br>
 </div>
 <div class="footer-copyright text-center text-white-50 py-3">© 2020 Copyright:
-    <a class="dark-grey-text" href="https://garagegraff.me/"> garagegraff</a>
+    <a class="dark-grey-text" href="http://garagegraff.patunganbersama.com/"> garagegraff</a>
   </div>
   </footer>
 <!-- jQuery -->

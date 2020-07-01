@@ -66,9 +66,9 @@ class AdminController extends Controller
         $data_user = \App\User::paginate(10);
         return view('app.admin.app_dash.data_user',['data_user'=> $data_user]);
     }
-    public function user_profile(){
-        $data_user = \App\User::all();
-        return view('app.admin.app_dash.user_profile',['data_user'=> $data_user]);
+    public function user_profile($id){
+        $user = \App\User::find($id);
+        return view('app.admin.app_dash.user_profile',['user'=> $user]);
     }
 
 

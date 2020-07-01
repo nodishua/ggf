@@ -61,7 +61,7 @@ Route::prefix('admin')->group(function () {
         // Data User
         Route::get('/data_user', 'AdminController@data_user')->name('admin.data_user');
         Route::get('/{id}/delete','AdminController@delete_user')->name('admin.delete_user');
-        Route::get('/user_profile','AdminController@user_profile')->name('admin.user_profile');
+        Route::get('/user_profile/{id}','AdminController@user_profile')->name('admin.user_profile');
 
         // Data Produk
         Route::get('/product', 'AdminController@product')->name('admin.product');

@@ -23,7 +23,6 @@
                     <strong>List Warna : </strong><br>
                     <a href="{{ route('spray300ml') }}" class="btn btn-outline-dark"><span>Ukuran 300ML</span></a>
                     <a href="{{ route('spray400ml') }}" class="btn btn-outline-dark"><span>Ukuran 400ML</span></a>
-                    <br>
                     @else
                     @endif
                     <strong>Description :</strong> <br>

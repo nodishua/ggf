@@ -9,7 +9,7 @@
         </nav>
     <div class="card">
         <div class="card-header">
-            <img src="{{ url('images/products') }}/{{ $product->image}}" alt="" width="500px" class=" img-fluid h-100 d-block">
+            <img src="{{ url('images/products') }}/{{ $product->image}}" alt="" class="card-img-top" style="width:327px; height:200px">>
         </div>
         <div class="card-body">
                 <h3 class="card-title"><strong>{{ $product->name_product }}</strong></h3>

@@ -7,7 +7,7 @@
           <h3><strong> HOT PRODUCTS </strong></h3>
         </div>
     </div>
-    <div class="row-fluid justify-content-center text ">
+    <div class="row row-fluid justify-content-center text ">
         @foreach($product as $products)
         <div class="col-md-4">
             <div class="card bb">

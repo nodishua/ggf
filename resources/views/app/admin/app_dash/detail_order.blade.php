@@ -1,15 +1,15 @@
 @include('app.admin.app.header')
-<div class="content-wrapper">
-
+<div class="content-wraper">
     <section class="content">
+        <div class="content-header">
+            <h1><strong>Detail Order</strong></h1>
+        </div>
           <div class="container-fluid">
             <div class="row">
               <!-- left column -->
               <div class="col-md-14">
                 <!-- general form elements -->
                 <div class="card card-dark">
-                  <div class="card-header">
-                    <h1 class="card-title">Detail Order</h1><br>
                     <div class="row invoice-info">
                         <div class="col-sm-6 invoice-col">
                           To

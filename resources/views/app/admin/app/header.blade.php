@@ -48,7 +48,6 @@
           </li>
         </ul>
       </nav>
-
       <!-- Main Sidebar Container -->
       <aside class="main-sidebar elevation-4 sidebar-dark-warning">
         <!-- Brand Logo -->
@@ -65,6 +64,14 @@
           <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
               <li class="nav-header">UPDATE PANEL</li>
+              <li class="nav-item">
+                <a href="{{ route('admin.dashboard') }}" class="nav-link">
+                  <i class="nav-icon fa fa-dashboard"></i>
+                  <p>
+                    Dashboard
+                  </p>
+                </a>
+              </li>
               <li class="nav-item has-treeview active menu-open">
                 <a href="#" class="nav-link">
                   <i class="nav-icon fas fa-database"></i>
@@ -104,22 +111,14 @@
                       <p>Data Order</p>
                     </a>
                   </li>
-                  <li class="nav-item has-treeview active menu-open">
-                    <a href="#" class="nav-link">
-                      <i class="nav-icon far fa-plus-square"></i>
+                </ul>
+                  <li class="nav-item">
+                    <a href="{{ route('admin.status_order') }}" class="nav-link">
+                      <i class="nav-icon fa fa-fw fa-truck"></i>
                       <p>
-                        Status
-                        <i class="fas fa-angle-left right"></i>
+                        Status Order
                       </p>
                     </a>
-                    <ul class="nav nav-treeview">
-                      <li class="nav-item">
-                        <a href="{{ route('admin.status_order') }}" class="nav-link">
-                          <i class="far fa-circle nav-icon"></i>
-                          <p>Status Order</p>
-                        </a>
-                      </li>
-                    </ul>
                   </li>
                   <li class="nav-item">
                     <a href="{{ route('admin.logout') }}" class="nav-link">
@@ -131,8 +130,8 @@
                   </li>
                 </ul>
               </li>
+            </ul>
           </nav>
           <!-- /.sidebar-menu -->
         </div>
-        <!-- /.sidebar -->
-      </aside>
+    </aside>

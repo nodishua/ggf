@@ -42,6 +42,7 @@
                                     <option value="1" <?php if($order->status=="1") echo 'selected="selected"'; ?>>Sudah Checkout</option>
                                     <option value="2" <?php if($order->status=="2") echo 'selected="selected"'; ?>>Sedang Dikemas</option>
                                     <option value="3" <?php if($order->status=="3") echo 'selected="selected"'; ?>>Barang Telah Dikirim</option>
+                                    <option value="4" <?php if($order->status=="4") echo 'selected="selected"'; ?>>Order Selesai</option>
                                 </select>
                                 </td>
                                 <td>

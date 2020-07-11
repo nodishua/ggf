@@ -1,15 +1,5 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 Auth::routes();
 Route::get('/login','Auth\LoginController@showLoginForm')->name('login');
 Route::post('/login','Auth\LoginController@login')->name('login.submit');
@@ -24,8 +14,6 @@ Route::get('/product','HomeController@product')->name('product');
 Route::get('/product/{id}','HomeController@product_show')->name('product_show');
 Route::get('/order/{id}', 'OrderController@index')->name('order.index');
 Route::post('/order/{id}', 'OrderController@order')->name('order');
-
-
 
 
 Route::get('/event','HomeController@event')->name('event');
@@ -80,8 +68,8 @@ Route::prefix('admin')->group(function () {
         // Data Order
         Route::get('/data_order','AdminController@data_order')->name('admin.order_data');
         Route::get('/data_order/{id}','AdminController@detail_order')->name('admin.detail_order');
-        Route::get('/data_order/search','AdminController@search_order')->name('admin.order_search');
-
+        Route::get('/new_order','AdminController@new_order')->name('admin.new_order');
+        Route::get('/on_ship','AdminController@on_ship')->name('admin.on_ship');
         // Status
         Route::get('/status_order','AdminController@status_order')->name('admin.status_order');
         Route::post('/status_order/{id}','AdminController@status_update')->name('admin.status_update');

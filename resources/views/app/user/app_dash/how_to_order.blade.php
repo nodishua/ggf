@@ -9,7 +9,7 @@
                 <strong> 2. Masukkan Jumlah / Quantity Barang yang Akan Dibeli,
                 Untuk Pembelian Spray Paint Diharapkan Memberikan Note Untuk Warna Yang Dipilih. Add To Cart. </strong>
                 <hr>
-                <img src="{{ URL::asset('/style/front/img/step2.png') }}" class="img-fluid w-100 d-block">
+                <img src="{{ URL::asset('/style/front/img/step2.PNG') }}" class="img-fluid w-100 d-block">
                 <div class="text-center mt-3">
                     <strong>List Warna : </strong>
                     <a href="{{ route('spray300ml') }}" class="btn btn-outline-dark"><span>Ukuran 300ML</span></a>

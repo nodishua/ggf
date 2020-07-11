@@ -1,7 +1,7 @@
 @include('app.admin.app.header')
-
 <div class="content-wrapper">
     <section class="content">
+        <div class="content-header"></div>
           <div class="container-fluid">
             <div class="row">
               <!-- left column -->
@@ -18,12 +18,13 @@
                           <div class="col-sm-4 invoice-col">
                               To
                               <address>
-                                <strong>{{ $order->user->name }}</strong><br>
-                                {{ $order->user->address }}<br>
-                                {{ $order->user->poscode }}<br>
-                                Phone : {{ $order->user->phone_number }}<br>
-                                Email : {{ $order->user->email }}
-                                  <b>Order ID: {{ $order->order_id }}<b><br>
+
+                                  <strong>{{ $order->name }}</strong><br>
+                                  {{ $order->address }}<br>
+                                  {{ $order->poscode }}<br>
+                                  Phone : {{ $order->phone_number }}<br>
+                                  Email : {{ $order->email }}<br>
+                                  <b>Order ID: {{ $order->order_id }}</b><br>
                                 </address>
                             </div>
                         </div>
@@ -39,26 +40,35 @@
                                 <th>Jumlah Barang</th>
                                 <th>Note</th>
                                 <th>Gambar</th>
-                                <th>Kode</th>
+                                <th>Harga</th>
                                 <th>Total Harga</th>
                             </tr>
                         </thead>
                         <tbody>
                             <?php $no = 1; ?>
-                            @foreach($order as $order_detail)
+                            @foreach($data_order as $order)
                             <tr>
                             <td>
                                 {{ $no++ }}
                             </td>
-                            <td>{{ \Carbon\Carbon::parse($order_detail->tanggal)->format('d F Y')}}</td>
-                            <td>{{ $order_detail->name_product }}</td>
-                            <td>{{ $order_detail->jumlah }}</td>
-                            <td>{{ $order_detail->note }}</td>
-                            <td><img src="{{ url('images/products') }}/{{ $order_detail->image }}" width="100" alt="..."></td>
-                            <td>{{ number_format($order_detail->kode) }}</td>
-                            <td>Rp. {{ number_format($order_detail->kode+$order_detail->jumlah_harga) }}</td>
+                            <td>{{ \Carbon\Carbon::parse($order->tanggal)->format('d F Y')}}</td>
+                            <td>{{ $order->name_product }}</td>
+                            <td>{{ $order->jumlah }}</td>
+                            <td>{{ $order->note }}</td>
+                            <td><img src="{{ url('images/products') }}/{{ $order->image }}" width="100" alt="..."></td>
+                            <td>{{ $order->harga }}</td>
+                            <td>{{ $order->harga*$order->jumlah }}</td>
+                        </tr>
+                        @endforeach
+                        <tr>
+                                <td colspan="7" align="right"><strong>Kode Unik :</strong></td>
+                                <td ><strong>Rp. {{ number_format($order->kode) }}</strong></td>
                             </tr>
-                            @endforeach
+                            <tr>
+                                <td colspan="7" align="right"><strong>Total yang harus ditransfer :</strong></td>
+                                <td ><strong>Rp. {{ number_format($order->kode+$order->jumlah_harga) }}</strong></td>
+
+                            </tr>
                             </tbody>
                     </table>
                     </div>
@@ -71,4 +81,5 @@
 <hr/>
 </section>
 </div>
+
 @include('app.admin.app.footer')

@@ -28,7 +28,7 @@ Route::prefix('user')->group(function () {
     Route::post('profile', 'ProfileController@update');
 
     Route::get('history', 'HistoryController@index');
-    Route::get('history/{id}', 'HistoryController@detail');
+    Route::get('history/{id}', 'HistoryController@detail')->name('user.history');
     Route::get('history/cetak_history/{id}','HistoryController@cetak_history');
     Route::get('/check_out', 'OrderController@check_out')->name('check_out');
     Route::delete('/check_out/{id}', 'OrderController@delete')->name('checkout_delete');

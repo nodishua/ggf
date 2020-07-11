@@ -46,7 +46,7 @@
                                 </td>
                                 <td class="align-middle">
                                 <div class="btn-group btn-group-sm">
-                                    <a href="{{ url('admin/data_order/'.$order->id) }}" class="btn btn-info"><i class="fas fa-eye"></i></a>
+                                    <a href="{{ url('admin/data_order/'.$order->order_id) }}" class="btn btn-info"><i class="fas fa-eye"></i></a>
                                 </div>
                                 </td>
                             </tr>

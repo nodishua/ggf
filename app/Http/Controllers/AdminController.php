@@ -239,11 +239,7 @@ class AdminController extends Controller
     }
 
     public function data_order(){
-        $data_order = DB::table('order_details')
-        ->join('orders','orders.order_id','=','order_details.order_id')
-        ->join('users','orders.user_id','=','users.user_id')
-        ->orderBy('tanggal','ASC')
-        ->paginate(10);
+        $data_order = Order::all();
         return view('app.admin.app_dash.data_order',compact('data_order'));
     }
 
@@ -252,12 +248,12 @@ class AdminController extends Controller
         ->join('orders','orders.order_id','=','order_details.order_id')
         ->join('users','orders.user_id','=','users.user_id')
         ->join('products','products.product_id','=','order_details.product_id')
-        ->where('order_details.id','=',$id)
+        ->where('orders.order_id','=',$id)
         ->get();
         foreach($data_order as $order){
 
         }
-        return view('app.admin.app_dash.detail_order',compact('order'));
+        return view('app.admin.app_dash.detail_order',compact('data_order','order'));
 
     }
 

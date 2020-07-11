@@ -1,4 +1,5 @@
 @include('app.admin.app.header')
+
 <div class="content-wrapper">
     <section class="content">
           <div class="container-fluid">
@@ -9,7 +10,7 @@
                 <div class="card card-dark">
                     <div class="row">
                         <div class="col-md-12 mb-3 mt-3 ml-3">
-                            <a href="{{ url('admin/data_reservasi') }}" class="btn btn-dark"><i class="fa fa-arrow-left"></i> Back</a>
+                            <a href="{{ route('admin.order_data') }}" class="btn btn-dark"><i class="fa fa-arrow-left"></i> Back</a>
                         </div>
                     </div>
                   <div class="card-header">
@@ -17,16 +18,14 @@
                           <div class="col-sm-4 invoice-col">
                               To
                               <address>
-                                  @foreach($data_order as $order)
-                                  <strong>{{ $order->name }}</strong><br>
-                                  {{ $order->address }}<br>
-                                  {{ $order->poscode }}<br>
-                                  Phone : {{ $order->phone_number }}<br>
-                                  Email : {{ $order->email }}<br>
+                                <strong>{{ $order->user->name }}</strong><br>
+                                {{ $order->user->address }}<br>
+                                {{ $order->user->poscode }}<br>
+                                Phone : {{ $order->user->phone_number }}<br>
+                                Email : {{ $order->user->email }}
                                   <b>Order ID: {{ $order->order_id }}<b><br>
                                 </address>
                             </div>
-                            @endforeach
                         </div>
                   </div>
                 <div class="card-body">
@@ -46,18 +45,18 @@
                         </thead>
                         <tbody>
                             <?php $no = 1; ?>
-                            @foreach($data_order as $order)
+                            @foreach($order as $order_detail)
                             <tr>
                             <td>
                                 {{ $no++ }}
                             </td>
-                            <td>{{ \Carbon\Carbon::parse($order->tanggal)->format('d F Y')}}</td>
-                            <td>{{ $order->name_product }}</td>
-                            <td>{{ $order->jumlah }}</td>
-                            <td>{{ $order->note }}</td>
-                            <td><img src="{{ url('images/products') }}/{{ $order->image }}" width="100" alt="..."></td>
-                            <td>{{ number_format($order->kode) }}</td>
-                            <td>Rp. {{ number_format($order->kode+$order->jumlah_harga) }}</td>
+                            <td>{{ \Carbon\Carbon::parse($order_detail->tanggal)->format('d F Y')}}</td>
+                            <td>{{ $order_detail->name_product }}</td>
+                            <td>{{ $order_detail->jumlah }}</td>
+                            <td>{{ $order_detail->note }}</td>
+                            <td><img src="{{ url('images/products') }}/{{ $order_detail->image }}" width="100" alt="..."></td>
+                            <td>{{ number_format($order_detail->kode) }}</td>
+                            <td>Rp. {{ number_format($order_detail->kode+$order_detail->jumlah_harga) }}</td>
                             </tr>
                             @endforeach
                             </tbody>
@@ -72,5 +71,4 @@
 <hr/>
 </section>
 </div>
-
 @include('app.admin.app.footer')

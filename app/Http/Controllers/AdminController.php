@@ -254,7 +254,11 @@ class AdminController extends Controller
         ->join('products','products.product_id','=','order_details.product_id')
         ->where('order_details.id','=',$id)
         ->get();
-        return view('app.admin.app_dash.detail_order',compact('data_order'));
+        foreach($data_order as $order){
+
+        }
+        return view('app.admin.app_dash.detail_order',compact('order'));
+
     }
 
     public function new_order(){

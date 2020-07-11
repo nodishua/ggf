@@ -1,38 +1,36 @@
 @include('app.admin.app.header')
-<div class="content-wraper">
+<div class="content-wrapper">
     <section class="content">
-        <div class="content-header">
-            <h1><strong>Detail Order</strong></h1>
-        </div>
           <div class="container-fluid">
             <div class="row">
               <!-- left column -->
               <div class="col-md-14">
                 <!-- general form elements -->
                 <div class="card card-dark">
-                    <div class="row invoice-info">
-                        <div class="col-sm-6 invoice-col">
-                          To
-                          @foreach($data_order as $order)
-                          <address>
-                            <strong>{{ $order->name }}</strong><br>
-                            {{ $order->address }}<br>
-                            {{ $order->poscode }}<br>
-                            Phone : {{ $order->phone_number }}<br>
-                            Email : {{ $order->email }} <br>
-                            No Order : <strong>{{ $order->order_id }}</strong>
-                          </address>
-                          @endforeach
-                        </div>
-                        </div>
                     <div class="row">
-                        <div class="col-md-12 mb-3 mt-3">
-                            <a href="{{ route('admin.order_data') }}" class="btn btn-primary"><i class="fa fa-arrow-left"></i> Back</a>
+                        <div class="col-md-12 mb-3 mt-3 ml-3">
+                            <a href="{{ url('admin/data_reservasi') }}" class="btn btn-dark"><i class="fa fa-arrow-left"></i> Back</a>
                         </div>
                     </div>
+                  <div class="card-header">
+                      <div class ="row invoice-info">
+                          <div class="col-sm-4 invoice-col">
+                              To
+                              <address>
+                                  @foreach($data_order as $order)
+                                  <strong>{{ $order->name }}</strong><br>
+                                  {{ $order->address }}<br>
+                                  {{ $order->poscode }}<br>
+                                  Phone : {{ $order->phone_number }}<br>
+                                  Email : {{ $order->email }}<br>
+                                  <b>Order ID: {{ $order->order_id }}<b><br>
+                                </address>
+                            </div>
+                            @endforeach
+                        </div>
                   </div>
                 <div class="card-body">
-                <div class="table-responsive text-nowrap">
+                <div class="table-responsive">
                     <table class="table table-striped">
                         <thead>
                             <tr>
@@ -50,22 +48,22 @@
                             <?php $no = 1; ?>
                             @foreach($data_order as $order)
                             <tr>
-                                <td>
-                                    {{ $no++ }}
-                                </td>
-                                <td>{{ \Carbon\Carbon::parse($order->tanggal)->format('d F Y')}}</>
-                                <td>{{ $order->name_product }}</td>
-                                <td>{{ $order->jumlah }}</td>
-                                <td>{{ $order->note }}</td>
-                                <td><img src="{{ url('images/products') }}/{{ $order->image }}" width="100" alt="..."></td>
-                                <td>{{ number_format($order->kode) }}</td>
-                                <td>Rp. {{ number_format($order->kode+$order->jumlah_harga) }}</td>
+                            <td>
+                                {{ $no++ }}
+                            </td>
+                            <td>{{ \Carbon\Carbon::parse($order->tanggal)->format('d F Y')}}</td>
+                            <td>{{ $order->name_product }}</td>
+                            <td>{{ $order->jumlah }}</td>
+                            <td>{{ $order->note }}</td>
+                            <td><img src="{{ url('images/products') }}/{{ $order->image }}" width="100" alt="..."></td>
+                            <td>{{ number_format($order->kode) }}</td>
+                            <td>Rp. {{ number_format($order->kode+$order->jumlah_harga) }}</td>
                             </tr>
                             @endforeach
-                        </tbody>
+                            </tbody>
                     </table>
                     </div>
-                    </div>
+                </div>
                 </div>
             </div>
         </div>
@@ -73,5 +71,6 @@
 </div>
 <hr/>
 </section>
+</div>
 
 @include('app.admin.app.footer')

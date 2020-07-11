@@ -6,14 +6,14 @@
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="{{ url('/') }}">Home</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Riwayat Pemesanan</li>
+                    <li class="breadcrumb-item active" aria-current="page">Order History</li>
                 </ol>
             </nav>
         </div>
         <div class="col-md-12">
             <div class="card">
                 <div class="card-body">
-                    <h3><i class="fa fa-history"></i> Riwayat Pemesanan</h3>
+                    <h3><i class="fa fa-history"></i> Order History</h3>
                     <table class="table table-striped">
                         <thead>
                             <tr>

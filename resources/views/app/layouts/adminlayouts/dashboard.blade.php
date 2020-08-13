@@ -36,7 +36,7 @@
           <!-- small box -->
           <div class="small-box bg-red">
             <div class="inner">
-              <h3>{{ $in_ship }}</h3>
+              <h3>{{ $in_ships }}</h3>
               <p>In Shipping</p>
             </div>
             <div class="icon">

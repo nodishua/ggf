@@ -19,10 +19,10 @@
                                 <th>Email</th>
                                 <th>Jumlah</th>
                                 <th>Total Harga</th>
-                                <th>Total</th>
                                 <th>Tanggal Order</th>
                                 <th>Status</th>
                                 <th>Details</th>
+                                <th>Total</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -35,7 +35,6 @@
                                 <td>{{ $order->email }}</td>
                                 <td>{{ $order->jumlah }}</td>
                                 <td>Rp. {{ number_format($order->jumlah_harga) }}</td>
-                                <td>{{ $total }}</td>
                                 <td>{{ $order->tanggal }}</td>
                                 <td>
                                     @if ($order->status == "1")
@@ -51,12 +50,13 @@
                                     @endif
                                 </td>
                                 <td class="align-middle">
-                                <div class="btn-group btn-group-sm">
-                                    <a href="{{ url('admin/data_order/'.$order->order_id) }}" class="btn btn-info"><i class="fas fa-eye"></i></a>
-                                </div>
+                                    <div class="btn-group btn-group-sm">
+                                        <a href="{{ url('admin/data_order/'.$order->order_id) }}" class="btn btn-info"><i class="fas fa-eye"></i></a>
+                                    </div>
                                 </td>
+                                @endforeach
+                                <td>{{ $total }}</td>
                             </tr>
-                            @endforeach
                             {{--  <td></td>
                             <td></td>
                             <td></td>

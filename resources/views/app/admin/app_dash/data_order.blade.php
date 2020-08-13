@@ -56,7 +56,7 @@
                             <td>Total</td>
                             <td></td>
                             <td></td>
-                            <td>Rp. {{ number_format(sum($order->jumlah_harga) }}</td>
+                            <td>Rp. {{ number_format(sum('jumlah_harga') }}</td>
                             <td></td>
                             </tbody>
                             </table>

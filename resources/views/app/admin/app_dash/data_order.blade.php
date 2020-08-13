@@ -53,6 +53,10 @@
                                 </td>
                             </tr>
                             @endforeach
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>Rp. {{ number_format($order->kode+$order->jumlah_harga) }}</td>
                             </tbody>
                             </table>
                         </div>

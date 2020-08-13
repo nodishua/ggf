@@ -55,7 +55,7 @@
                                 </td>
                             </tr>
                             @endforeach
-                            <td></td>
+                            {{--  <td></td>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -63,7 +63,7 @@
                             <td>Rp. {{ number_format($total) }}</td>
                             <td></td>
                             <td></td>
-                            <td></td>
+                            <td></td>  --}}
                             </tbody>
                             </table>
                         </div>

@@ -249,7 +249,7 @@ class AdminController extends Controller
         $total = DB::table('order_details')
         ->join('orders','order_details.order_id','=','orders.order_id')
         ->join('users','orders.user_id','=','users.user_id')
-        ->count('jumlah_harga');
+        ->sum('jumlah_harga');
         return view('app.admin.app_dash.data_order',compact('data_order','total'));
     }
 

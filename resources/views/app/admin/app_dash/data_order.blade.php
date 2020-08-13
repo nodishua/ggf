@@ -19,6 +19,7 @@
                                 <th>Email</th>
                                 <th>Jumlah</th>
                                 <th>Total Harga</th>
+                                <th>Total</th>
                                 <th>Tanggal Order</th>
                                 <th>Status</th>
                                 <th>Details</th>
@@ -34,6 +35,7 @@
                                 <td>{{ $order->email }}</td>
                                 <td>{{ $order->jumlah }}</td>
                                 <td>Rp. {{ number_format($order->jumlah_harga) }}</td>
+                                <td>{{ $total }}</td>
                                 <td>{{ $order->tanggal }}</td>
                                 <td>
                                     @if ($order->status == "1")

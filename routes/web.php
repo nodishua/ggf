@@ -20,10 +20,10 @@ Route::get('/event','HomeController@event')->name('event');
 Route::get('/event/{id}','HomeController@event_show')->name('event_show');
 Route::get('/user/logout', 'Auth\LoginController@userLogout')->name('user.logout');
 Route::prefix('user')->group(function () {
-    Route::post('/password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name('user.password.email');
-    Route::get('/password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('user.password.request');
-    Route::post('/password/reset', 'Auth\ResetPasswordController@reset');
-    Route::get('/password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('user.password.reset');
+    // Route::post('/password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name('user.password.email');
+    // Route::get('/password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('user.password.request');
+    // Route::post('/password/reset', 'Auth\ResetPasswordController@reset');
+    // Route::get('/password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('user.password.reset');
     Route::get('profile', 'ProfileController@index');
     Route::post('profile', 'ProfileController@update');
 
@@ -69,15 +69,10 @@ Route::prefix('admin')->group(function () {
         Route::get('/data_order','AdminController@data_order')->name('admin.order_data');
         Route::get('/data_order/{id}','AdminController@detail_order')->name('admin.detail_order');
         Route::get('/new_order','AdminController@new_order')->name('admin.new_order');
-        Route::get('/on_ship','AdminController@on_ship')->name('admin.on_ship');
+        Route::get('/in_ship','AdminController@in_ship')->name('admin.in_ship');
         // Status
         Route::get('/status_order','AdminController@status_order')->name('admin.status_order');
         Route::post('/status_order/{id}','AdminController@status_update')->name('admin.status_update');
         Route::get('/status_order/{id}/delete','AdminController@order_delete')->name('admin.order_delete');
 
-        // password reset
-        Route::post('/password/email', 'Auth\AdminForgotPasswordController@sendResetLinkEmail')->name('admin.password.email');
-        Route::get('/password/reset', 'Auth\AdminForgotPasswordController@showLinkRequestForm')->name('admin.password.request');
-        Route::post('/password/reset', 'Auth\AdminResetPasswordController@reset');
-        Route::get('/password/reset/{token}', 'Auth\AdminResetPasswordController@showResetForm')->name('admin.password.reset');
-    });
+        });

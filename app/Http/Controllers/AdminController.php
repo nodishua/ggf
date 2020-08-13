@@ -267,7 +267,7 @@ class AdminController extends Controller
         return view('app.admin.app_dash.data_order',compact('data_order'));
     }
 
-    public function on_ship(){
+    public function in_ship(){
         $data_order = DB::table('order_details')
         ->join('orders','orders.order_id','=','order_details.order_id')
         ->join('users','orders.user_id','=','users.user_id')
@@ -303,16 +303,4 @@ class AdminController extends Controller
         return back();
     }
 
-    public function search_order(Request $request){
-        $search = $request->search;
-        $data_order = DB::table('order_details')
-        ->join('orders','orders.order_id','=','order_details.order_id')
-        ->join('users','orders.user_id','=','users.user_id')
-        ->whereDate('tanggal','like',"%".$search."%")
-        ->orwhere('name','like',"%".$search."%")
-        ->orwhere('status','like',"%".$search."%")
-        ->orderBy('tanggal','ASC')
-        ->paginate(10);
-        return view('app.admin.app_dash.data_order',compact('data_order'));
-    }
 }

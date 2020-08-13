@@ -31,9 +31,4 @@ class HistoryController extends Controller
      	return view('app.user.app_dash.history_detail', compact('order','order_details'));
     }
 
-    public function cetak_history($id){
-        $order = Order::where('order_id', $id)->first();
-    	$order_details = OrderDetail::where('order_id', $order->order_id)->get();
-     	return view('app.user.app_dash.history_print', compact('order','order_details'));
-    }
 }

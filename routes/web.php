@@ -20,10 +20,10 @@ Route::get('/event','HomeController@event')->name('event');
 Route::get('/event/{id}','HomeController@event_show')->name('event_show');
 Route::get('/user/logout', 'Auth\LoginController@userLogout')->name('user.logout');
 Route::prefix('user')->group(function () {
-    // Route::post('/password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name('user.password.email');
-    // Route::get('/password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('user.password.request');
-    // Route::post('/password/reset', 'Auth\ResetPasswordController@reset');
-    // Route::get('/password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('user.password.reset');
+    Route::post('/password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name('user.password.email');
+    Route::get('/password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('user.password.request');
+    Route::post('/password/reset', 'Auth\ResetPasswordController@reset');
+    Route::get('/password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('user.password.reset');
     Route::get('profile', 'ProfileController@index');
     Route::post('profile', 'ProfileController@update');
 

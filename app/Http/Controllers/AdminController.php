@@ -40,7 +40,7 @@ class AdminController extends Controller
         ->where('status','=','1')
         ->count();
 
-        $on_ship = DB::table('order_details')
+        $in_ship = DB::table('order_details')
         ->join('orders','order_details.order_id','=','orders.order_id')
         ->join('users','orders.user_id','=','users.user_id')
         ->where('status','=','3')
@@ -263,23 +263,23 @@ class AdminController extends Controller
     }
 
     public function new_order(){
-        $new_orders = DB::table('order_details')
+        $data_order = DB::table('order_details')
         ->join('orders','orders.order_id','=','order_details.order_id')
         ->join('users','orders.user_id','=','users.user_id')
         ->orderBy('tanggal','ASC')
         ->where('status','=','1')
         ->paginate(10);
-        return view('app.admin.app_dash.data_order',compact('new_orders'));
+        return view('app.admin.app_dash.data_order',compact('data_order'));
     }
 
     public function in_ship(){
-        $in_ship = DB::table('order_details')
+        $data_order = DB::table('order_details')
         ->join('orders','orders.order_id','=','order_details.order_id')
         ->join('users','orders.user_id','=','users.user_id')
         ->orderBy('tanggal','ASC')
         ->where('status','=','3')
         ->paginate(10);
-        return view('app.admin.app_dash.status_order',compact('in_ship'));
+        return view('app.admin.app_dash.status_order',compact('data_order'));
     }
     public function status_order(){
         $data_order = DB::table('order_details')

@@ -53,18 +53,18 @@
                                     <a href="{{ url('admin/data_order/'.$order->order_id) }}" class="btn btn-info"><i class="fas fa-eye"></i></a>
                                 </div>
                                 </td>
-                                @endforeach
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td>/td>
-                                    <td><strong>TOTAL</strong></td>
-                                    <td>Rp. {{ number_format($total) }}</td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                </tbody>
+                            </tr>
+                            @endforeach
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td><strong>TOTAL</strong></td>
+                            <td>Rp. {{ number_format($total) }}</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            </tbody>
                             </table>
                         </div>
                         </div>

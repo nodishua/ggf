@@ -56,7 +56,7 @@
                             <td></td>
                             <td></td>
                             <td><strong>TOTAL</strong></td>
-                            <td>Rp. {{ number_format($jumlah_harga+$jumlah_harga) }}</td>
+                            <td>Rp. {{ number_format($order->jumlah_harga+$order->jumlah_harga) }}</td>
                             <td></td>
                             <td></td>
                             <td></td>

@@ -18,6 +18,7 @@
                                 <th>Nama</th>
                                 <th>Email</th>
                                 <th>Jumlah</th>
+                                <th>Total Harga</th>
                                 <th>Tanggal Order</th>
                                 <th>Status</th>
                                 <th>Details</th>
@@ -32,6 +33,7 @@
                                 <td>{{ $order->name }}</td>
                                 <td>{{ $order->email }}</td>
                                 <td>{{ $order->jumlah }}</td>
+                                <td>{{ $order->jumlah_harga }}</td>
                                 <td>{{ $order->tanggal }}</td>
                                 <td>
                                     @if ($order->status == "1")

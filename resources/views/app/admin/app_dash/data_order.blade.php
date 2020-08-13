@@ -17,6 +17,7 @@
                                 <th>Order Id</th>
                                 <th>Nama</th>
                                 <th>Email</th>
+                                <th>Jumlah</th>
                                 <th>Tanggal Order</th>
                                 <th>Status</th>
                                 <th>Details</th>
@@ -30,6 +31,7 @@
                                 <td>{{ $order->order_id }}</td>
                                 <td>{{ $order->name }}</td>
                                 <td>{{ $order->email }}</td>
+                                <td>{{ $order->jumlah }}</td>
                                 <td>{{ $order->tanggal }}</td>
                                 <td>
                                     @if ($order->status == "1")

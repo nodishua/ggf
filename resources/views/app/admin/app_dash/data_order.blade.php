@@ -33,7 +33,7 @@
                                 <td>{{ $order->name }}</td>
                                 <td>{{ $order->email }}</td>
                                 <td>{{ $order->jumlah }}</td>
-                                <td>{{ $order->jumlah_harga }}</td>
+                                <td>Rp. {{ number_format($order->jumlah_harga) }}</td>
                                 <td>{{ $order->tanggal }}</td>
                                 <td>
                                     @if ($order->status == "1")
@@ -57,10 +57,10 @@
                             @endforeach
                             <td></td>
                             <td></td>
+                            <td></td>
+                            <td>/td>
                             <td><strong>TOTAL</strong></td>
-                            <td>Rp. {{ number_format($total) }}</td>
-                            <td></td>
-                            <td></td>
+                            <td><</td>
                             <td></td>
                             <td></td>
                             </tbody>

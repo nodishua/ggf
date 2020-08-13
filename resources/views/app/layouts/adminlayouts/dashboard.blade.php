@@ -42,7 +42,7 @@
             <div class="icon">
               <i class="fa fa-truck"></i>
             </div>
-            <a href="{{ route('admin.on_ship') }}" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="{{ route('admin.in_ship') }}" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->

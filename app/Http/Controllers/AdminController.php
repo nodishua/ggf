@@ -45,7 +45,7 @@ class AdminController extends Controller
         ->join('users','orders.user_id','=','users.user_id')
         ->where('status','=','3')
         ->count();
-        return view('app.layouts.adminlayouts.dashboard',compact('new_orders','on_ship'));
+        return view('app.layouts.adminlayouts.dashboard',compact('new_orders','in_ship'));
     }
 
     //Proses Admin

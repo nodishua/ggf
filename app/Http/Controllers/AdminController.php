@@ -246,7 +246,7 @@ class AdminController extends Controller
         ->where('status','=','4')
         ->paginate(10);
 
-        return view('app.admin.app_dash.data_order',compact('data_order','total'));
+        return view('app.admin.app_dash.data_order',compact('data_order'));
     }
 
     public function detail_order($id){

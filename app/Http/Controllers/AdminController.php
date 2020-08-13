@@ -253,7 +253,7 @@ class AdminController extends Controller
         // ->where('status','=','4')
         // ->sum('order_details.jumlah_harga');
 
-        return view('app.admin.app_dash.data_order',compact('data_order','total'));
+        return view('app.admin.app_dash.data_order',compact('data_order'));
     }
 
     public function detail_order($id){

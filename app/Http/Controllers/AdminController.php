@@ -246,14 +246,6 @@ class AdminController extends Controller
         ->where('status','=','4')
         ->paginate(10);
 
-        $total = DB::table('order_details')
-        ->join('orders','orders.order_id','=','order_details.order_id')
-        ->join('users','orders.user_id','=','users.user_id')
-        ->orderBy('tanggal','ASC')
-        ->sum('jumlah_harga')
-        ->where('status','=','4')
-        ->paginate(10);
-
         return view('app.admin.app_dash.data_order',compact('data_order','total'));
     }
 

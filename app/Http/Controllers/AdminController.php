@@ -251,7 +251,7 @@ class AdminController extends Controller
         ->join('users','orders.user_id','=','users.user_id')
         ->orderBy('tanggal','ASC')
         ->where('status','=','4')
-        ->orWhere('jumlah_harga','+','jumlah_harga')
+        ->sum('order_details.jumlah_harga')
         ->paginate(10);
 
         return view('app.admin.app_dash.data_order',compact('data_order','total'));

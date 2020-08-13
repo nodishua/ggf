@@ -22,7 +22,6 @@
                                 <th>Tanggal Order</th>
                                 <th>Status</th>
                                 <th>Details</th>
-                                <th>Total</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -55,17 +54,7 @@
                                     </div>
                                 </td>
                                 @endforeach
-                                <td>{{ $total }}</td>
                             </tr>
-                            {{--  <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td><strong>TOTAL</strong></td>
-                            <td>Rp. {{ number_format($total) }}</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>  --}}
                             </tbody>
                             </table>
                         </div>

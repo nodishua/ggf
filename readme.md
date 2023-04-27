@@ -12,7 +12,9 @@ The things you need before installing the software.
 
 ```
 $ git clone https://github.com/nodishua/ggf
+```
 $ Copy env.example and rename the new one as .env
+```
 $ composer install / composer update
 $ php artisan migrate for database
 $ php artisan key:generate (sometimes you need doing this)

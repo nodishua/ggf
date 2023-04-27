@@ -1,10 +1,24 @@
-<p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
+# GarageGraff Store
+Project for scientific research, make an online store with Laravel as framework
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+### Prerequisites
 
-Garagegraffstore PI
+The things you need before installing the software.
+
+* You need at least laravel version 5.6
+* Php version 7.1.3
+
+### Installation
+
+```
+$ git clone https://github.com/nodishua/ggf
+$ Copy env.example and rename the new one as .env
+$ composer install / composer update
+$ php artisan migrate for database
+$ php artisan key:generate (sometimes you need doing this)
+$ php artisan serve (to run the laravel)
+```
+
+## Usage
+
+Feel Free to use :)
